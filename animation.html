@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Animation</title>
+    <style media="screen">
+    html {
+      background-color: pink;
+    }
+
+      /* стили эмодзи */
+      .emoji {
+        width: 160px;
+        height: 160px;
+        display: inline-block;
+        position: relative;
+        background: url('images/emoji1.png');
+      }
+      .emoji2 {
+        width: 160px;
+        height: 160px;
+        display: inline-block;
+        position: relative;
+        background: url('images/emoji2.png');
+      }
+      .emoji3 {
+        width: 160px;
+        height: 160px;
+        display: inline-block;
+        position: relative;
+        background: url('images/emoji3.png');
+      }
+      .emoji5 {
+        width: 160px;
+        height: 160px;
+        display: inline-block;
+        position: relative;
+        background: url('images/emoji5.png');
+        left: 160px;
+      }
+
+
+      .emoji_mouth {
+      width: 160px;
+      height: 160px;
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: url('images/emoji1.png');
+      background-position: -160px 0;
+      }
+      .emoji_eyes {
+        width: 160px;
+        height: 160px;
+        display: block;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        background: url('images/emoji1.png');
+        background-position: -640px 0;
+      }
+      .emoji_tongue {
+        width: 160px;
+        height: 160px;
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: url('images/emoji4.png');
+        background-position: -160px 0;
+      }
+      .mouth {
+        animation: mouth 1s steps(1) alternate infinite;
+
+      }
+      .eyes {
+        animation: eyes 1s steps(1) alternate infinite;
+
+      }
+      .spin {
+        animation: spin 1s linear infinite;
+      }
+      .tongue:hover {
+        animation: tongue 0.5s alternate linear both;
+
+      }
+      .heart {
+        animation: heart .4s alternate infinite;
+      }
+
+      /* анимация эмодзи */
+      @keyframes mouth {
+        0% {background-position: -160px 0;}
+        33% {background-position: -320px 0;}
+        66% {background-position: -480px 0;}
+
+      }
+      @keyframes eyes {
+        0% {background-position: -640px 0;}
+        33% {background-position: -800px 0;}
+        66% {background-position: -960px 0;}
+
+      }
+      @keyframes spin {
+        0% {transform: rotate(0deg);}
+        100% {transform: rotate(360deg);}
+      }
+      @keyframes tongue {
+      0% { transform: translateY(0);}
+      100% {transform: translateY(100px);}
+      }
+      @keyframes heart {
+        0% { transform: scale(0);}
+        100% { transform: scale(1);}
+      }
+
+
+    </style>
+  </head>
+  <body>
+    <!-- эмодзи -->
+    <div class="emoji">
+      <div class="emoji_eyes eyes"></div>
+      <div class="emoji_mouth mouth"></div>
+    </div>
+    <div class="emoji2 spin"></div>
+    <div class="emoji3">
+    <div class="emoji_tongue tongue"></div>
+    <div class="emoji5 heart">
+
+    </div>
+
+    </div>
+
+
+
+  </body>
+</html>
